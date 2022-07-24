@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>gui</class>
+ <widget class="QMainWindow" name="gui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>469</width>
+    <height>449</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">RSB</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res/res.qrc">
+    <normaloff>:/img/splash.png</normaloff>:/img/splash.png</iconset>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <property name="topMargin">
+     <number>6</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QTableWidget" name="GUI_Sysinfo">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
+      </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string notr="true">Part</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string notr="true">Description</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="GUI_StartBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>75</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>START</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+S</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="GUI_MenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>469</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="GUI_Menus_Settings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <widget class="QMenu" name="GUI_Menus_Themes">
+     <property name="title">
+      <string>Theme</string>
+     </property>
+     <addaction name="GUI_Menus_Theme_FusionL"/>
+     <addaction name="GUI_Menus_Theme_FusionD"/>
+     <addaction name="GUI_Menus_Theme_Win"/>
+     <addaction name="GUI_Menus_Theme_WinXP"/>
+     <addaction name="GUI_Menus_Theme_Vista"/>
+    </widget>
+    <addaction name="GUI_Menus_WrapperOptions"/>
+    <addaction name="separator"/>
+    <addaction name="GUI_Menus_Start_KeepBest"/>
+    <addaction name="GUI_Menus_Themes"/>
+    <addaction name="separator"/>
+    <addaction name="GUI_Menus_Exit"/>
+   </widget>
+   <widget class="QMenu" name="GUI_Menus_Save">
+    <property name="title">
+     <string>Save &amp;&amp; Submit</string>
+    </property>
+    <addaction name="GUI_Menus_SaveTo"/>
+    <addaction name="GUI_Menus_SaveToDesk"/>
+    <addaction name="separator"/>
+    <addaction name="GUI_Menus_SubmitOnline"/>
+   </widget>
+   <widget class="QMenu" name="GUI_Menus_Help">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="GUI_Menus_Update"/>
+    <addaction name="separator"/>
+    <addaction name="actionRe_quest_feature"/>
+    <addaction name="action_Report_bug"/>
+    <addaction name="separator"/>
+    <addaction name="GUI_Menus_About"/>
+   </widget>
+   <widget class="QMenu" name="GUI_Menus_Start">
+    <property name="title">
+     <string>Start</string>
+    </property>
+    <addaction name="GUI_Menus_Picker"/>
+    <addaction name="GUI_Menus_Start_Now"/>
+    <addaction name="separator"/>
+    <addaction name="GUI_Menus_Start_Batch"/>
+   </widget>
+   <addaction name="GUI_Menus_Settings"/>
+   <addaction name="GUI_Menus_Start"/>
+   <addaction name="GUI_Menus_Save"/>
+   <addaction name="GUI_Menus_Help"/>
+  </widget>
+  <widget class="QDockWidget" name="GUI_ScoreDock">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>175</width>
+     <height>233</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>Double-click on titlebar or press the button
+to detach from the main window.</string>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string notr="true"/>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="GUI_ScoreDock_Layout">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>6</number>
+     </property>
+     <property name="topMargin">
+      <number>6</number>
+     </property>
+     <property name="rightMargin">
+      <number>6</number>
+     </property>
+     <property name="bottomMargin">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QLCDNumber" name="GUI_Score">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>true</bool>
+       </property>
+       <property name="digitCount">
+        <number>8</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="GUI_Subscores">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>false</bool>
+       </property>
+       <property name="showDropIndicator" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::NoSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="showGrid">
+        <bool>false</bool>
+       </property>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>50</number>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>Test</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Score</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="GUI_SaveBtn">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>141</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save to desktop</string>
+       </property>
+       <property name="shortcut">
+        <string>F7</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="GUI_Menus_Select_Aqua3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Aquamark3</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Select_Cine03">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Cinebench 2003</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Select_Cine115">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Cinebench R11.5</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Select_Cine15">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Cinebench R15</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_About">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Update">
+   <property name="text">
+    <string>Check for updates</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_BenchOptions">
+   <property name="text">
+    <string>Benchmark &amp;Options</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_WrapperOptions">
+   <property name="text">
+    <string>&amp;Options</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
+   </property>
+  </action>
+  <action name="GUI_Menus_Theme_FusionD">
+   <property name="text">
+    <string>Fusion Dark</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Theme_FusionL">
+   <property name="text">
+    <string>Fusion Light</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Theme_Win">
+   <property name="text">
+    <string>Windows</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Theme_WinXP">
+   <property name="text">
+    <string>Windows XP</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Theme_Vista">
+   <property name="text">
+    <string>Windows Vista</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Select_UniDX9">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Unigine Basic</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Select_UniDX11">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Unigine Xtreme</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_SaveToDesk">
+   <property name="text">
+    <string>Save to desktop</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_SaveTo">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_SubmitOnline">
+   <property name="text">
+    <string>Submit online...</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Picker">
+   <property name="text">
+    <string>Select &amp;Benchmark</string>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="GUI_Menus_Start_Now">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Start now</string>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="GUI_Menus_Start_KeepBest">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show best score only</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Start_Batch">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Batch &amp;Run</string>
+   </property>
+  </action>
+  <action name="GUI_Menus_Exit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="action_Report_bug">
+   <property name="text">
+    <string>&amp;Report bug...</string>
+   </property>
+  </action>
+  <action name="actionRe_quest_feature">
+   <property name="text">
+    <string>Re&amp;quest feature...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

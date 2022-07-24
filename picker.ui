@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>picker</class>
+ <widget class="QDialog" name="picker">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>418</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Select a benchmark</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetDefaultConstraint</enum>
+   </property>
+   <item>
+    <widget class="QComboBox" name="GUI_BenchType">
+     <property name="toolTip">
+      <string>Please select a benchmark category.</string>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>2D Benchmarks</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3D Benchmarks</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Video Games</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="GUI_BenchName">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Please select a benchmark.</string>
+     </property>
+     <property name="currentText">
+      <string notr="true"/>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="GUI_BenchPreset">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Please select a preset for the current benchmark.</string>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="GUI_Tabs">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="movable">
+      <bool>true</bool>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="GUI_TabCPU">
+      <attribute name="title">
+       <string>CPU Settings</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Processor tweaks.</string>
+      </attribute>
+      <attribute name="whatsThis">
+       <string>Processor tweaks.</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="GUI_TabCPU_">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="GUI_TabCPU__">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>449</width>
+            <height>259</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="leftMargin">
+            <number>6</number>
+           </property>
+           <property name="topMargin">
+            <number>6</number>
+           </property>
+           <property name="rightMargin">
+            <number>6</number>
+           </property>
+           <property name="bottomMargin">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="GUI_Cores_Groupbox">
+             <property name="title">
+              <string>Core Affinity</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>1</number>
+              </property>
+              <item>
+               <widget class="QScrollArea" name="GUI_Cores_">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="GUI_Cores__">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>435</width>
+                   <height>205</height>
+                  </rect>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <item row="0" column="2">
+                   <widget class="QCheckBox" name="ckbCore03">
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4">
+                   <widget class="QCheckBox" name="ckbCore05">
+                    <property name="text">
+                     <string>5</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QCheckBox" name="ckbCore01">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QCheckBox" name="ckbCore02">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="5">
+                   <widget class="QCheckBox" name="ckbCore06">
+                    <property name="text">
+                     <string>6</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="6">
+                   <widget class="QCheckBox" name="ckbCore07">
+                    <property name="text">
+                     <string>7</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QCheckBox" name="ckbCore04">
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="7">
+                   <widget class="QCheckBox" name="ckbCore08">
+                    <property name="text">
+                     <string>8</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QCheckBox" name="ckbCore09">
+                    <property name="text">
+                     <string>9</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QCheckBox" name="ckbCore10">
+                    <property name="text">
+                     <string>10</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="2">
+                   <widget class="QCheckBox" name="ckbCore27">
+                    <property name="text">
+                     <string>27</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="6">
+                   <widget class="QCheckBox" name="ckbCore39">
+                    <property name="text">
+                     <string>39</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QCheckBox" name="ckbCore41">
+                    <property name="text">
+                     <string>41</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QCheckBox" name="ckbCore42">
+                    <property name="text">
+                     <string>42</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="4">
+                   <widget class="QCheckBox" name="ckbCore13">
+                    <property name="text">
+                     <string>13</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QCheckBox" name="ckbCore18">
+                    <property name="text">
+                     <string>18</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3">
+                   <widget class="QCheckBox" name="ckbCore20">
+                    <property name="text">
+                     <string>20</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="3">
+                   <widget class="QCheckBox" name="ckbCore28">
+                    <property name="text">
+                     <string>28</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="5">
+                   <widget class="QCheckBox" name="ckbCore38">
+                    <property name="text">
+                     <string>38</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="7">
+                   <widget class="QCheckBox" name="ckbCore40">
+                    <property name="text">
+                     <string>40</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QCheckBox" name="ckbCore34">
+                    <property name="text">
+                     <string>34</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="6">
+                   <widget class="QCheckBox" name="ckbCore15">
+                    <property name="text">
+                     <string>15</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="3">
+                   <widget class="QCheckBox" name="ckbCore12">
+                    <property name="text">
+                     <string>12</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="5">
+                   <widget class="QCheckBox" name="ckbCore14">
+                    <property name="text">
+                     <string>14</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="6">
+                   <widget class="QCheckBox" name="ckbCore23">
+                    <property name="text">
+                     <string>23</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QCheckBox" name="ckbCore11">
+                    <property name="text">
+                     <string>11</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QCheckBox" name="ckbCore25">
+                    <property name="text">
+                     <string>25</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="7">
+                   <widget class="QCheckBox" name="ckbCore16">
+                    <property name="text">
+                     <string>16</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QCheckBox" name="ckbCore26">
+                    <property name="text">
+                     <string>26</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="4">
+                   <widget class="QCheckBox" name="ckbCore29">
+                    <property name="text">
+                     <string>29</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="4">
+                   <widget class="QCheckBox" name="ckbCore21">
+                    <property name="text">
+                     <string>21</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="5">
+                   <widget class="QCheckBox" name="ckbCore30">
+                    <property name="text">
+                     <string>30</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="3">
+                   <widget class="QCheckBox" name="ckbCore36">
+                    <property name="text">
+                     <string>36</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="5">
+                   <widget class="QCheckBox" name="ckbCore22">
+                    <property name="text">
+                     <string>22</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QCheckBox" name="ckbCore19">
+                    <property name="text">
+                     <string>19</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="6">
+                   <widget class="QCheckBox" name="ckbCore31">
+                    <property name="text">
+                     <string>31</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QCheckBox" name="ckbCore33">
+                    <property name="text">
+                     <string>33</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="2">
+                   <widget class="QCheckBox" name="ckbCore35">
+                    <property name="text">
+                     <string>35</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QCheckBox" name="ckbCore17">
+                    <property name="text">
+                     <string>17</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="7">
+                   <widget class="QCheckBox" name="ckbCore24">
+                    <property name="text">
+                     <string>24</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="7">
+                   <widget class="QCheckBox" name="ckbCore32">
+                    <property name="text">
+                     <string>32</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="4">
+                   <widget class="QCheckBox" name="ckbCore37">
+                    <property name="text">
+                     <string>37</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="2">
+                   <widget class="QCheckBox" name="ckbCore51">
+                    <property name="text">
+                     <string>51</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QCheckBox" name="ckbCore49">
+                    <property name="text">
+                     <string>49</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="2">
+                   <widget class="QCheckBox" name="ckbCore59">
+                    <property name="text">
+                     <string>59</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="3">
+                   <widget class="QCheckBox" name="ckbCore60">
+                    <property name="text">
+                     <string>60</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="4">
+                   <widget class="QCheckBox" name="ckbCore45">
+                    <property name="text">
+                     <string>45</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="6">
+                   <widget class="QCheckBox" name="ckbCore47">
+                    <property name="text">
+                     <string>47</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QCheckBox" name="ckbCore50">
+                    <property name="text">
+                     <string>50</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="5">
+                   <widget class="QCheckBox" name="ckbCore46">
+                    <property name="text">
+                     <string>46</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="3">
+                   <widget class="QCheckBox" name="ckbCore52">
+                    <property name="text">
+                     <string>52</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="2">
+                   <widget class="QCheckBox" name="ckbCore43">
+                    <property name="text">
+                     <string>43</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="3">
+                   <widget class="QCheckBox" name="ckbCore44">
+                    <property name="text">
+                     <string>44</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="5">
+                   <widget class="QCheckBox" name="ckbCore54">
+                    <property name="text">
+                     <string>54</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="6">
+                   <widget class="QCheckBox" name="ckbCore55">
+                    <property name="text">
+                     <string>55</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="7">
+                   <widget class="QCheckBox" name="ckbCore48">
+                    <property name="text">
+                     <string>48</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="7">
+                   <widget class="QCheckBox" name="ckbCore56">
+                    <property name="text">
+                     <string>56</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QCheckBox" name="ckbCore57">
+                    <property name="text">
+                     <string>57</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="4">
+                   <widget class="QCheckBox" name="ckbCore53">
+                    <property name="text">
+                     <string>53</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1">
+                   <widget class="QCheckBox" name="ckbCore58">
+                    <property name="text">
+                     <string>58</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="6">
+                   <widget class="QCheckBox" name="ckbCore63">
+                    <property name="text">
+                     <string>63</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="5">
+                   <widget class="QCheckBox" name="ckbCore62">
+                    <property name="text">
+                     <string>62</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="7">
+                   <widget class="QCheckBox" name="ckbCore64">
+                    <property name="text">
+                     <string>64</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="4">
+                   <widget class="QCheckBox" name="ckbCore61">
+                    <property name="text">
+                     <string>61</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="GUI_ProcessPrio">
+             <property name="toolTip">
+              <string>Set process priority.
+Higher means more processor load.</string>
+             </property>
+             <property name="whatsThis">
+              <string/>
+             </property>
+             <property name="currentText">
+              <string>Normal</string>
+             </property>
+             <property name="currentIndex">
+              <number>2</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Idle</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Below Normal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Normal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Above Normal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>High</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Realtime</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="GUI_TabVGA">
+      <attribute name="title">
+       <string>VGA Settings</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Video card settings and tweaks.</string>
+      </attribute>
+      <attribute name="whatsThis">
+       <string>Video card settings and tweaks.</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="GUI_TabVGA_Brand">
+         <property name="tabPosition">
+          <enum>QTabWidget::West</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="GUI_TabVGA_AMD">
+          <attribute name="title">
+           <string>AMD/ATI</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <property name="leftMargin">
+            <number>6</number>
+           </property>
+           <property name="topMargin">
+            <number>6</number>
+           </property>
+           <property name="rightMargin">
+            <number>6</number>
+           </property>
+           <property name="bottomMargin">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QScrollArea" name="GUI_TabVGA_AMD_">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="GUI_TabVGA_AMD__">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>179</width>
+                <height>106</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QGroupBox" name="GUI_TabVGA_AMD_Lod">
+                 <property name="title">
+                  <string>Level of detail</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_13">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>2</number>
+                  </property>
+                  <item>
+                   <widget class="QScrollArea" name="GUI_TabVGA_AMD_Lod_">
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="GUI_TabVGA_AMD_Lod__">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>98</width>
+                       <height>68</height>
+                      </rect>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_14">
+                      <item>
+                       <widget class="QDial" name="GUI_LODDial_AMD">
+                        <property name="minimum">
+                         <number>-108</number>
+                        </property>
+                        <property name="maximum">
+                         <number>108</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                        <property name="pageStep">
+                         <number>13</number>
+                        </property>
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="notchesVisible">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="GUI_LODValue_AMD">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="whatsThis">
+                     <string/>
+                    </property>
+                    <property name="text">
+                     <string>------</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="GUI_TabVGA_AMD_Misc">
+                 <property name="title">
+                  <string>Misc</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>2</number>
+                  </property>
+                  <item>
+                   <widget class="QScrollArea" name="GUI_TabVGA_AMD_Misc_">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="GUI_TabVGA_AMD_Misc__">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>100</width>
+                       <height>30</height>
+                      </rect>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="GUI_TabVGA_NVIDIA">
+          <attribute name="title">
+           <string>NVIDIA</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QLabel" name="GUI_TabVGA_NVIDIA_Message">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>NOT SUPPORTED</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="GUI_TabExtra">
+      <attribute name="title">
+       <string>Benchmark Settings</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Settings for the selected benchmark.</string>
+      </attribute>
+      <attribute name="whatsThis">
+       <string>Settings for the selected benchmark.</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="GUI_TabExtra_">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="GUI_TabExtra__">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>449</width>
+            <height>259</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QStackedWidget" name="GUI_ExtraSettings">
+             <property name="accessibleName">
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="GUI_ExtraSettings_Page0">
+              <property name="accessibleName">
+               <string notr="true"/>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QLabel" name="GUI_ExtraSettings_Page0_Message">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>No settings available for the selected benchmark preset.</string>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="GUI_ExtraSettings_Aquamark3">
+              <property name="accessibleName">
+               <string notr="true"/>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <item>
+                <widget class="QScrollArea" name="GUI_ExtraSettings_Aqua3_">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="GUI_ExtraSettings_Aqua3__">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>431</width>
+                    <height>241</height>
+                   </rect>
+                  </property>
+                  <layout class="QFormLayout" name="formLayout">
+                   <property name="horizontalSpacing">
+                    <number>6</number>
+                   </property>
+                   <property name="verticalSpacing">
+                    <number>6</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblRunMode">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="whatsThis">
+                      <string>Use Manual if you experience problems with old cards or IGP.</string>
+                     </property>
+                     <property name="text">
+                      <string>Run Mode</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QComboBox" name="GUI_Aqua3_RunMode">
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Automatic</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Manual</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblHideLogo">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Hide Logo</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="GUI_Aqua3_HideLogo">
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>True</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>False</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblOSD">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>OSD Statistics</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QComboBox" name="GUI_Aqua3_OSD">
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>True</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>False</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="lblOSD_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="toolTip">
+                      <string>If set to TRUE it will no longer ask the user if he wants to reset settings after a session that was closed prematurely.</string>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Hide Reset Error</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QComboBox" name="GUI_Aqua3_HideReset">
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>True</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>False</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="GUI_ExtraSettings_Unigine">
+              <property name="accessibleName">
+               <string notr="true"/>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
+               <property name="topMargin">
+                <number>9</number>
+               </property>
+               <property name="rightMargin">
+                <number>9</number>
+               </property>
+               <property name="bottomMargin">
+                <number>9</number>
+               </property>
+               <item>
+                <widget class="QScrollArea" name="GUI_ExtraSettings_Unigine_">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="GUI_ExtraSettings_Unigine__">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>100</width>
+                    <height>30</height>
+                   </rect>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="GUI_ButtonsLayout">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="GUI_AddBtn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>141</width>
+          <height>31</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Add a new benchmark or game.</string>
+        </property>
+        <property name="text">
+         <string>&amp;Add new...</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="GUI_OKBtn">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>141</width>
+          <height>31</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>&amp;OK</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="GUI_CancelBtn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>141</width>
+          <height>31</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>&amp;Cancel</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

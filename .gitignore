@@ -1,5 +1,6 @@
 security.cpp
 security.h
+.qtc_clangd
 
 # Prerequisites
 *.d

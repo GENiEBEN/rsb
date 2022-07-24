@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\gui.o
+./release\picker.o
+./release\misc.o
+./release\aquamark3.o
+./release\security.o
+./release\smbios.o
+./release\sysinfo.o
+./release\rsb_plugin_import.o
+./release\qrc_res.o
+./release\moc_gui.o
+./release\moc_picker.o
+);

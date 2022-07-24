@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\gui.o
+./debug\picker.o
+./debug\misc.o
+./debug\aquamark3.o
+./debug\security.o
+./debug\smbios.o
+./debug\sysinfo.o
+./debug\rsb_plugin_import.o
+./debug\qrc_res.o
+./debug\moc_gui.o
+./debug\moc_picker.o
+);
